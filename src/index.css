@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #0c0f12;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  position: relative;
+  background-color: #101317;
+  border-radius: 5px;
+  box-shadow: 0 -3px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 1rem;
+  width: 250px;
+}
+
+.movie img {
+  max-width: 100%;
+}
+
+.movie-info {
+  display: flex;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-over{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e6e4e4;
+  color: #101317;
+  padding: 1rem;
+  transform: translateY(102%);
+  transition: 0.3s ease-in-out;
+  max-height: 100%
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0);
+}
+
+header {
+  background-color:#1a1f26;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+
+header p {
+  font-size: 24px;
+}
+
+.search {
+  font-family: inherit;
+  border: 2px solid #0c0f12;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background-color: transparent;
+  color:  #e6e4e4;
+  padding: 0.5rem 1.5rem;
+  margin: 0.8rem 1.5rem;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+.tag {
+  background-color: #0c0f12;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.tag.green {
+  color: green;
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.red {
+  color: red;
 }
